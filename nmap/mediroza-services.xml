@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Thu Oct  1 08:37:47 2026 as: /usr/lib/nmap/nmap -Pn -sV -sC -p21,25,53,80,110,143,443,465,587,993,995,2077,2091 -oA scans/nmap/mediroza-services 199.188.201.16 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -Pn -sV -sC -p21,25,53,80,110,143,443,465,587,993,995,2077,2091 -oA scans/nmap/mediroza-services 199.188.201.16" start="1790858267" startstr="Thu Oct  1 08:37:47 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="13" services="21,25,53,80,110,143,443,465,587,993,995,2077,2091"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="NSE" time="1790858939" percent="97.12" remaining="14" etc="1790858952"/>
+<taskprogress task="NSE" time="1790858947" percent="98.08" remaining="10" etc="1790858956"/>
+<taskprogress task="NSE" time="1790858949" percent="98.08" remaining="10" etc="1790858958"/>
+<taskprogress task="NSE" time="1790858950" percent="98.08" remaining="10" etc="1790858959"/>
+<host starttime="1790858269" endtime="1790858969"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="199.188.201.16" addrtype="ipv4"/>
+<hostnames>
+<hostname name="server274-1.web-hosting.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" method="table" conf="3"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 25"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" extrainfo="unknown banner: BIND" servicefp="SF-Port53-TCP:V=7.99%I=7%D=10/1%Time=6ABE5429%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,3F,&quot;\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04BIND\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind&#xa;    BIND"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind&#xa;    BIND</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" product="HAProxy http proxy" version="2.0.0 or later" devicetype="load balancer" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="openresty/1.31.1.1"><elem>openresty/1.31.1.1</elem>
+</script><script id="http-title" output="One moment, please..."><elem key="title">One moment, please...</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="imap-capabilities" output="ID ENABLE AUTH=PLAIN SASL-IR post-login STARTTLS OK have AUTH=LOGINA0001 capabilities LOGIN-REFERRALS IDLE Pre-login listed more LITERAL+ IMAP4rev1"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" product="HAProxy http proxy" version="2.0.0 or later" devicetype="load balancer" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:haproxy:haproxy</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-server-header" output="openresty/1.31.1.1"><elem>openresty/1.31.1.1</elem>
+</script><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1&#xa;  http/1.0&#xa;  http/0.9"><elem>h2</elem>
+<elem>http/1.1</elem>
+<elem>http/1.0</elem>
+<elem>http/0.9</elem>
+</script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="http-title" output="One moment, please..."><elem key="title">One moment, please...</elem>
+</script><script id="ssl-cert" output="Subject: commonName=server274.web-hosting.com&#xa;Not valid before: 2026-07-16T09:38:48&#xa;Not valid after:  2027-07-16T09:38:48"><table key="subject">
+<elem key="commonName">server274.web-hosting.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">server274.web-hosting.com</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">89E5EF060F89FE6ADBDCE74281B7FD92F40935271D7BC9E45DB1548D1EE7955A1215D6EA7C10DF5B0A35501C21168CA484E2335F759FD5827E72F0F4D4992C7429D62F916DA770DA5C023D32CF28EA9A4844773CD76DF967D5271FB35DE3A101F781F0A22C1E8FCCC8C0A09BAAC6D52DA14FE60EA2A6F2F9C0BA5F04F0EAF210CD20F15C3D5C3D8525D248FC29182FB452B4CE2B93FCF17690C09A2DF1CDF81FDDE51848238A868D18AFE3C75D4BD375C283798B55A135FB0EF748DB90E3AAB9BBDD30C8B186A5DD4222D20419B09E06D75C46D2B3F2D5A4286638266F44B8B193D14709749B77D7C2D68FD5FBCC6DDCA4FF1B62760CB833C893B6BED37AB7086B58B1D919B915531FBEFAB11A4744473223F8D663CABD6B136220197C23B3849D875E6BC9987297DA00BA21AC6F005A4E339703A1E2F2A410EC42FE9A4E31597A476908A9CA22969C91BE38A520582B3A223CF6B365316C8790A11357E8E85F5556841319FEDAE761BE5B845A7BEAD92F1BBBEC6D1E4741601A68392DDC94A599C3D655A901E9C5E80057A170EB5B3B73DA50DFD7472E87D488EA957210990DF464CEE4EB0A52F1AD72F09115693A63A7330A9322F9F7832093D05268284D8A22C1E82B80319C299BFD55178148F2BF7A5E41C06A657AC06DF4F6358164AFF0C35CEF6B99480658F8D765B322034EDE5406CE2A1437BC3816FBABAE7CB5CEF7</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">87:D6:6C:7B:A3:5B:7A:5B:DE:80:20:FD:39:EE:C0:98:CD:86:73:5A</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">87:D6:6C:7B:A3:5B:7A:5B:DE:80:20:FD:39:EE:C0:98:CD:86:73:5A</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-07-16T09:38:48</elem>
+<elem key="notAfter">2027-07-16T09:38:48</elem>
+</table>
+<elem key="md5">2eb30b929de91b19c667c9e85ddf8b47</elem>
+<elem key="sha1">dd0e5fa5589b2ef15206c233c0e1fc2063741282</elem>
+<elem key="sha256">b1f59ae5680d51744dc122b18f4ed2dd686b9d808335b5e7ce25b0190fa00bda</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFKTCCAxGgAwIBAgIUSn2p/AN7O47MEOlHFdoAkk9CQWYwDQYJKoZIhvcNAQEL&#xa;BQAwJDEiMCAGA1UEAwwZc2VydmVyMjc0LndlYi1ob3N0aW5nLmNvbTAeFw0yNjA3&#xa;MTYwOTM4NDhaFw0yNzA3MTYwOTM4NDhaMCQxIjAgBgNVBAMMGXNlcnZlcjI3NC53&#xa;ZWItaG9zdGluZy5jb20wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCJ&#xa;5e8GD4n+atvc50KBt/2S9Ak1Jx17yeRdsVSNHueVWhIV1up8EN9bCjVQHCEWjKSE&#xa;4jNfdZ/Vgn5y8PTUmSx0KdYvkW2ncNpcAj0yzyjqmkhEdzzXbfln1Scfs13joQH3&#xa;gfCiLB6PzMjAoJuqxtUtoU/mDqKm8vnAul8E8OryEM0g8Vw9XD2FJdJI/CkYL7RS&#xa;tM4rk/zxdpDAmi3xzfgf3eUYSCOKho0Yr+PHXUvTdcKDeYtVoTX7DvdI25Djqrm7&#xa;3TDIsYal3UIi0gQZsJ4G11xG0rPy1aQoZjgmb0S4sZPRRwl0m3fXwtaP1fvMbdyk&#xa;/xtidgy4M8iTtr7TercIa1ix2Rm5FVMfvvqxGkdERzIj+NZjyr1rE2IgGXwjs4Sd&#xa;h15ryZhyl9oAuiGsbwBaTjOXA6Hi8qQQ7EL+mk4xWXpHaQipyiKWnJG+OKUgWCs6&#xa;Ijz2s2UxbIeQoRNX6OhfVVaEExn+2udhvluEWnvq2S8bu+xtHkdBYBpoOS3clKWZ&#xa;w9ZVqQHpxegAV6Fw61s7c9pQ39dHLofUiOqVchCZDfRkzuTrClLxrXLwkRVpOmOn&#xa;MwqTIvn3gyCT0FJoKE2KIsHoK4AxnCmb/VUXgUjyv3peQcBqZXrAbfT2NYFkr/DD&#xa;XO9rmUgGWPjXZbMiA07eVAbOKhQ3vDgW+6uufLXO9wIDAQABo1MwUTAdBgNVHQ4E&#xa;FgQUh9Zse6NbelvegCD9Oe7AmM2Gc1owHwYDVR0jBBgwFoAUh9Zse6NbelvegCD9&#xa;Oe7AmM2Gc1owDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAgEAHRJ9&#xa;MRyctxrUKL3u+3iAFCJ2RopbrOQ8jCT7uD1kg6RI1gwTRhWYZUxA3MtGESUXWdPO&#xa;MHzVSGQ4qxpXAYq/4rCZuGeI48u6MQiwnbvmUT/8bwKH7Xbmw98HJAwRf0HBmsD2&#xa;uiS0EFSyooe4YxQMoaqzEjjyH0XogXEHvIUmWBOp2dj6wlh2VOqQC110In2At3NP&#xa;G0wVxGp4JG0uoHwFSoinIv1wD5EX6lHJGI+sLoh1zeoANBDGvReywPsTZTDH7HVa&#xa;J+Qgl9nqoUBUI1I+b07jkUjqubWtnUC93WHppzAjR2BZB1GXd6Hv7/Lg4L3u9H1t&#xa;go9R3pb1i9yqycdsPNrrpbQUsVmYOETeLMP1alcvWrulSQT8lLkRwULLDC4A2vVd&#xa;8nx9bEyzDHGRVZ2BXqHRxVlEkSiH7nimNMG7FZBb7zdQCdsPpoJP2ANZZPyHq1mE&#xa;dugR3rYijLxljX6m83V9fw4GZI5w2wLfQ39lkEuTOngXXdNXGKVtUrtJOQmY6Qfq&#xa;oSPv33zJXhXKYCWPxIwAhEN0Uh+pyLX8MchOYaO6uDxOroON5KANLIzvOJMXdcW9&#xa;aeoMBNGMVmM59L9z6dce+0lp4gYb3ADSMreaYlDIAJH/B4xgyxrstxi0HUaonlHH&#xa;FZ8UgiP61P2Xrij+/oxtYcQJiusU4aFycsY055U=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtps" method="table" conf="3"/><script id="smtp-commands" output="server274.web-hosting.com Hello server274-1.web-hosting.com [157.50.143.7], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP&#xa; Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP"/></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="Exim smtpd" version="4.100.1" hostname="server274.web-hosting.com" method="probed" conf="10"><cpe>cpe:/a:exim:exim:4.100.1</cpe></service><script id="smtp-commands" output="server274.web-hosting.com Hello server274-1.web-hosting.com [157.50.143.7], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP&#xa; Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imaps" method="table" conf="3"/><script id="imap-capabilities" output="AUTH=LOGINA0001 ID LOGIN-REFERRALS more ENABLE IDLE IMAP4rev1 listed Pre-login AUTH=PLAIN SASL-IR post-login capabilities OK LITERAL+ have"/></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2077"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tsrmagt" servicefp="SF-Port2077-TCP:V=7.99%I=7%D=10/1%Time=6ABE5488%P=x86_64-pc-linux-gnu%r(SIPOptions,16F,&quot;HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Thu,\x2001\x20Oct\x202026\x2012:39:59\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:\x20false\r\nHost:\x20server274\.web-hosting\.com:2077\r\nCache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x20close\r\nLocation:\x20https://server274\.web-hosting\.com:2078sip:nm\r\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    HTTP/1.1 302 Moved&#xa;    Date: Thu, 01 Oct 2026 12:39:59 GMT&#xa;    Server: cPanel&#xa;    Persistent-Auth: false&#xa;    Host: server274.web-hosting.com:2077&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Connection: close&#xa;    Location: https://server274.web-hosting.com:2078sip:nm&#xa;    Vary: Accept-Encoding&#xa;    Expires: Fri, 01 Jan 1990 00:00:00 GMT&#xa;    X-Redirect-Reason: requiressl"><elem key="SIPOptions">&#xa;    HTTP/1.1 302 Moved&#xa;    Date: Thu, 01 Oct 2026 12:39:59 GMT&#xa;    Server: cPanel&#xa;    Persistent-Auth: false&#xa;    Host: server274.web-hosting.com:2077&#xa;    Cache-Control: no-cache, no-store, must-revalidate, private&#xa;    Connection: close&#xa;    Location: https://server274.web-hosting.com:2078sip:nm&#xa;    Vary: Accept-Encoding&#xa;    Expires: Fri, 01 Jan 1990 00:00:00 GMT&#xa;    X-Redirect-Reason: requiressl</elem>
+</script></port>
+<port protocol="tcp" portid="2091"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="cPanel httpd" extrainfo="unauthorized" tunnel="ssl" method="probed" conf="10"/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=&quot;utf-8&quot;)."></script></port>
+</ports>
+<times srtt="190560" rttvar="186827" to="937868"/>
+</host>
+<runstats><finished time="1790858969" timestr="Thu Oct  1 08:49:29 2026" summary="Nmap done at Thu Oct  1 08:49:29 2026; 1 IP address (1 host up) scanned in 702.10 seconds" elapsed="702.10" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

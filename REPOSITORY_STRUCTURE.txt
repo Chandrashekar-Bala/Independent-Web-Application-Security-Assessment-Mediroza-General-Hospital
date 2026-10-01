@@ -1,0 +1,27 @@
+MEDIROZA SECURITY ASSESSMENT — CLEAN REPOSITORY STRUCTURE
+
+reports/
+  Final technical report and portfolio-safe case study.
+
+evidence/
+  reconnaissance/      DNS, HTTP, WHOIS, public HTML, technology and scan-report artifacts.
+  web-application/     Browser, Burp, SQLi, directory and application evidence screenshots.
+  patient-reports/     Retrieved patient-report PDFs used for the authorized milestone.
+  pdf-analysis/        Extracted PDF hashes, cracking output and tool-specific artifacts.
+  database-exposure/   Public database-backup evidence and captured backup artifact.
+
+nmap/
+  Raw Nmap .nmap, .gnmap and .xml outputs.
+
+documentation/
+  Assignment brief, methodology, evidence map, findings index, publication notes, inventory and SHA-256 manifest.
+
+confidential/
+  Full command register. Keep private because it contains sensitive execution details and recovered secrets.
+
+Design principles:
+- No numbered folders.
+- No duplicated source-archive tree.
+- No original-source mirror.
+- Each unique evidence artifact is retained once in the most relevant folder.
+- High-value reviewer paths are visible from the repository root.

@@ -1,0 +1,4 @@
+# Nmap 7.99 scan initiated Thu Oct  1 08:37:47 2026 as: /usr/lib/nmap/nmap -Pn -sV -sC -p21,25,53,80,110,143,443,465,587,993,995,2077,2091 -oA scans/nmap/mediroza-services 199.188.201.16
+Host: 199.188.201.16 (server274-1.web-hosting.com)	Status: Up
+Host: 199.188.201.16 (server274-1.web-hosting.com)	Ports: 21/open/tcp//ftp//Pure-FTPd/, 25/open/tcp//smtp?///, 53/open/tcp//domain//(unknown banner: BIND)/, 80/open/tcp//http-proxy//HAProxy http proxy 2.0.0 or later/, 110/open/tcp//pop3//Dovecot pop3d/, 143/open/tcp//imap//Dovecot imapd/, 443/open/tcp//ssl|http-proxy//HAProxy http proxy 2.0.0 or later/, 465/open/tcp//smtps?///, 587/open/tcp//smtp//Exim smtpd 4.100.1/, 993/open/tcp//imaps?///, 995/open/tcp//pop3s?///, 2077/open/tcp//tsrmagt?///, 2091/open/tcp//ssl|http//cPanel httpd (unauthorized)/
+# Nmap done at Thu Oct  1 08:49:29 2026 -- 1 IP address (1 host up) scanned in 702.10 seconds

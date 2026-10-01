@@ -1,0 +1,24 @@
+medirozahospital.com
+https://medirozahospital.com
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+medirozahospital.com.	14400	IN	A	199.188.201.16
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+medirozahospital.com.	14400	IN	MX	5 mx1-hosting.jellyfish.systems.
+medirozahospital.com.	14400	IN	MX	20 mx3-hosting.jellyfish.systems.
+medirozahospital.com.	14400	IN	MX	10 mx2-hosting.jellyfish.systems.
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+medirozahospital.com.	21600	IN	NS	dns2.namecheaphosting.com.
+medirozahospital.com.	21600	IN	NS	dns1.namecheaphosting.com.
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+;; communications error to 10.0.0.1#53: connection refused
+medirozahospital.com.	14400	IN	TXT	"v=spf1 +a +mx +ip4:199.188.201.7 +ip4:199.188.201.38 include:spf.web-hosting.com ~all"

@@ -1,0 +1,78 @@
+# Nmap 7.99 scan initiated Thu Oct  1 08:37:47 2026 as: /usr/lib/nmap/nmap -Pn -sV -sC -p21,25,53,80,110,143,443,465,587,993,995,2077,2091 -oA scans/nmap/mediroza-services 199.188.201.16
+Nmap scan report for server274-1.web-hosting.com (199.188.201.16)
+Host is up (0.19s latency).
+
+PORT     STATE SERVICE        VERSION
+21/tcp   open  ftp            Pure-FTPd
+25/tcp   open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+53/tcp   open  domain         (unknown banner: BIND)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    BIND
+80/tcp   open  http-proxy     HAProxy http proxy 2.0.0 or later
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: openresty/1.31.1.1
+|_http-title: One moment, please...
+110/tcp  open  pop3           Dovecot pop3d
+143/tcp  open  imap           Dovecot imapd
+|_imap-capabilities: ID ENABLE AUTH=PLAIN SASL-IR post-login STARTTLS OK have AUTH=LOGINA0001 capabilities LOGIN-REFERRALS IDLE Pre-login listed more LITERAL+ IMAP4rev1
+443/tcp  open  ssl/http-proxy HAProxy http proxy 2.0.0 or later
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: openresty/1.31.1.1
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-title: One moment, please...
+| ssl-cert: Subject: commonName=server274.web-hosting.com
+| Not valid before: 2026-07-16T09:38:48
+|_Not valid after:  2027-07-16T09:38:48
+465/tcp  open  smtps?
+| smtp-commands: server274.web-hosting.com Hello server274-1.web-hosting.com [157.50.143.7], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+587/tcp  open  smtp           Exim smtpd 4.100.1
+| smtp-commands: server274.web-hosting.com Hello server274-1.web-hosting.com [157.50.143.7], SIZE 52428800, LIMITS MAILMAX=1000 RCPTMAX=100, 8BITMIME, PIPELINING, PIPECONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+993/tcp  open  imaps?
+|_imap-capabilities: AUTH=LOGINA0001 ID LOGIN-REFERRALS more ENABLE IDLE IMAP4rev1 listed Pre-login AUTH=PLAIN SASL-IR post-login capabilities OK LITERAL+ have
+995/tcp  open  pop3s?
+2077/tcp open  tsrmagt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|     HTTP/1.1 302 Moved
+|     Date: Thu, 01 Oct 2026 12:39:59 GMT
+|     Server: cPanel
+|     Persistent-Auth: false
+|     Host: server274.web-hosting.com:2077
+|     Cache-Control: no-cache, no-store, must-revalidate, private
+|     Connection: close
+|     Location: https://server274.web-hosting.com:2078sip:nm
+|     Vary: Accept-Encoding
+|     Expires: Fri, 01 Jan 1990 00:00:00 GMT
+|_    X-Redirect-Reason: requiressl
+2091/tcp open  ssl/http       cPanel httpd (unauthorized)
+|_http-title: Site doesn't have a title (text/html; charset="utf-8").
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.99%I=7%D=10/1%Time=6ABE5429%P=x86_64-pc-linux-gnu%r(DNSV
+SF:ersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04BIND\xc0\x0c\
+SF:0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2077-TCP:V=7.99%I=7%D=10/1%Time=6ABE5488%P=x86_64-pc-linux-gnu%r(SI
+SF:POptions,16F,"HTTP/1\.1\x20302\x20Moved\r\nDate:\x20Thu,\x2001\x20Oct\x
+SF:202026\x2012:39:59\x20GMT\r\nServer:\x20cPanel\r\nPersistent-Auth:\x20f
+SF:alse\r\nHost:\x20server274\.web-hosting\.com:2077\r\nCache-Control:\x20
+SF:no-cache,\x20no-store,\x20must-revalidate,\x20private\r\nConnection:\x2
+SF:0close\r\nLocation:\x20https://server274\.web-hosting\.com:2078sip:nm\r
+SF:\nVary:\x20Accept-Encoding\r\nExpires:\x20Fri,\x2001\x20Jan\x201990\x20
+SF:00:00:00\x20GMT\r\nX-Redirect-Reason:\x20requiressl\r\n\r\n");
+Service Info: Host: server274.web-hosting.com; Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct  1 08:49:29 2026 -- 1 IP address (1 host up) scanned in 702.10 seconds
