@@ -1201,11 +1201,11 @@ The installed JtR build did not accept the extracted PDF format as expected; thi
 
 # 📚 Report & Evidence Navigation
 
-### Master technical report
+### Technical report
 
 ```text
 reports/
-└── Mediroza_Independent_Web_Application_Security_Assessment_Chandrashekar_Bala_FINAL_REPORT.pdf
+└── Mediroza_Penetration_Test_Report.pdf
 ```
 
 This is the canonical deduplicated report.
@@ -1214,15 +1214,15 @@ This is the canonical deduplicated report.
 
 ```text
 reports/
-└── Mediroza_Independent_Web_Application_Security_Assessment_Chandrashekar_Bala_FINAL_REPORT.docx
+└── Mediroza_Penetration_Test_Report.docx
 ```
 
 ### Public portfolio version
 
 ```text
 reports/
-├── Mediroza_Portfolio_Safe_Case_Study_Chandrashekar_Bala.pdf
-└── Mediroza_Portfolio_Safe_Case_Study_Chandrashekar_Bala.docx
+├── Mediroza_Portfolio_Case_Study.pdf
+└── Mediroza_Portfolio_Case_Study.docx
 ```
 
 ### Raw evidence
