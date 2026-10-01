@@ -1,4 +1,7 @@
-MEDIROZA SECURITY ASSESSMENT — CLEAN REPOSITORY STRUCTURE
+MEDIROZA SECURITY ASSESSMENT — REPOSITORY STRUCTURE
+
+assets/
+  Curated README visuals copied from the underlying evidence set for fast reviewer orientation.
 
 reports/
   Final technical report and portfolio-safe case study.
@@ -23,3 +26,4 @@ Design principles:
 - No duplicated source-archive tree.
 - Each unique evidence artifact is retained once in the most relevant folder.
 - High-value reviewer paths are visible from the repository root.
+- README visuals are separated from the underlying evidence so presentation assets do not replace forensic artifacts.
